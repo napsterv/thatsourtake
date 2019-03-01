@@ -35,7 +35,7 @@ class Post(models.Model):
     updated = models.DateTimeField(auto_now=True)
     tags = TaggableManager()
     source = models.URLField(null=True, blank=True)
-    categories = models.ForeignKey(Category, on_delete = models.CASCADE, null = True, blank = False, default = timezone.now)
+    categories = models.ForeignKey(Category, on_delete = models.CASCADE, blank = False)
 
     class Meta:
         ordering = ['-created']

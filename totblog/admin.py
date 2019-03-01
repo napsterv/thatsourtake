@@ -1,6 +1,6 @@
 from django.contrib import admin
 from django.contrib.admin import AdminSite
-from .models import Post, Page, Category, Advertisement
+from .models import Post, Page, Advertisement, Category
 # Register your models here.
 
 # Registering the 4 models on admin panel
