@@ -23,6 +23,6 @@ urlpatterns = [
     #path('totadmin/', totadmin.urls),
 ]
 
-admin.site.site_header = 'thatsourtake.com'
+admin.site.site_header = 'thatsOurtake.com'
 admin.site.site_title = 'Administrator'
-admin.site.index_title = 'thatsourtake Admin'
+admin.site.index_title = 'thatsOurtake Admin'

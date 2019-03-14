@@ -1,3 +1,6 @@
+{% load static %}
+{% include "carousel.html" %}
+{% comment %} {% include "base.html" %} {% endcomment %}
 <!DOCTYPE html>
 <html>
 <head>
@@ -5,13 +8,29 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Page Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" type="text/css" media="screen" href="main.css">
-    <script src="main.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 </head>
 <body>
-    {% for post in articles %}
-    <h1>{{ post.title }}</h1>
-    <p>{{ post.content }}</p>
-    {% endfor %}
+
+    <h1></h1>
+    <p></p>
+
+    {% for post in posts %}
+    <div class="row">
+        <div class="col-sm-6">
+     <div class="card">
+            <img class="card-img-top" src="{% static 'tOP_5_Phones_of_2018.png' %}" alt="card image cap" />
+            <div class="card-body">
+              <h5 class="card-title">{{ post.title }}</h5>
+              <p class="card-text">{{ post.content|truncatewords:30|safe }}</p>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
+        </div>
+        </div>
+        </div>
+        {% endfor %}
+
 </body>
 </html>

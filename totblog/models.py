@@ -2,6 +2,7 @@ from django.db import models
 from django.utils import timezone
 from django.contrib.auth.models import User
 from taggit.managers import TaggableManager
+from ckeditor.fields import RichTextField
 
 
 # Create your models here.
@@ -23,7 +24,7 @@ class Category(models.Model):
 
 class Post(models.Model):
     title = models.CharField(max_length=250)
-    content = models.TextField()
+    content = RichTextField()
     slug = models.SlugField(max_length=50, unique=True)
     featured_Post = models.BooleanField(default=True)
     featured_Image = models.ImageField(upload_to='assets/images')
